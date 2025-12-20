@@ -1,14 +1,43 @@
+# Robots.txt para ANCODEVS SpA
+# https://ancodevs.cl
+
+# Permitir acceso a todos los buscadores principales
+User-agent: *
+Allow: /
+
+# Bloquear acceso a archivos y carpetas específicas
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /dist/
+Disallow: /*.json$
+Disallow: /*.lock$
+
+# Permitir acceso específico a bots importantes
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /public/
+Allow: /assets/
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 0
 
+User-agent: Slurp
+Allow: /
+Crawl-delay: 0
+
+# Bots de redes sociales
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
 Allow: /
+
+# Sitemap
+Sitemap: https://ancodevs.cl/sitemap.xml

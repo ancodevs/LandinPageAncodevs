@@ -14,17 +14,17 @@ const Services = () => {
     {
       icon: Code2,
       title: "Desarrollo de Software",
-      description: "Software personalizado diseñado específicamente para las necesidades de tu negocio. Soluciones escalables y mantenibles.",
+      description: "Desarrollo de software personalizado en Chile diseñado específicamente para las necesidades de tu negocio. Soluciones escalables, mantenibles y de alta calidad.",
     },
     {
       icon: Smartphone,
       title: "Aplicaciones Móviles",
-      description: "Apps nativas e híbridas para iOS y Android. Experiencias móviles fluidas y optimizadas para tus usuarios.",
+      description: "Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android en Chile. Apps móviles fluidas, optimizadas y con excelente experiencia de usuario.",
     },
     {
       icon: Globe,
       title: "Desarrollo Web",
-      description: "Sitios web modernos, responsivos y optimizados para SEO. Desde landing pages hasta aplicaciones web complejas.",
+      description: "Desarrollo web en Chile: sitios web modernos, responsivos y optimizados para SEO. Desde landing pages hasta aplicaciones web progresivas (PWA) complejas.",
     },
     {
       icon: Cloud,
@@ -34,7 +34,7 @@ const Services = () => {
     {
       icon: Shield,
       title: "Ciberseguridad",
-      description: "Protección integral de tus sistemas y datos. Auditorías de seguridad, pentesting y consultoría especializada.",
+      description: "Servicios de ciberseguridad en Chile: protección integral de sistemas y datos. Auditorías de seguridad, pentesting, consultoría especializada y compliance.",
     },
     {
       icon: Database,
@@ -66,8 +66,9 @@ const Services = () => {
             Soluciones Tecnológicas <span className="text-gradient">Integrales</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Ofrecemos un amplio portafolio de servicios informáticos diseñados para 
-            impulsar tu negocio hacia el éxito digital.
+            Ofrecemos un amplio portafolio de <strong>servicios de desarrollo de software en Chile</strong> diseñados para 
+            impulsar tu negocio hacia el <strong>éxito digital</strong>. Especialistas en <strong>transformación digital</strong>, 
+            <strong> desarrollo de aplicaciones móviles</strong>, <strong>desarrollo web</strong> y <strong>ciberseguridad</strong>.
           </p>
         </div>
 

@@ -102,8 +102,9 @@ const ScreenshotCarousel = ({ screenshots, title, className = "h-[400px]" }: { s
           <div key={index} className="min-w-full h-full flex-shrink-0">
             <img
               src={screenshot}
-              alt={`${title} screenshot ${index + 1}`}
+              alt={`${title} - Captura de pantalla ${index + 1} del proyecto desarrollado por ANCODEVS SpA`}
               className="w-full h-full object-cover"
+              loading="lazy"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';
@@ -310,8 +311,9 @@ const Portfolio = () => {
                               <div className="relative h-[400px] overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
                                 <img 
                                   src={project.screenshot} 
-                                  alt={`${project.title} screenshot`}
+                                  alt={`Captura de pantalla de ${project.title} - ${project.category} desarrollado por ANCODEVS SpA`}
                                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                  loading="lazy"
                                   onError={(e) => {
                                     const target = e.target as HTMLImageElement;
                                     const container = target.parentElement;
@@ -333,8 +335,9 @@ const Portfolio = () => {
                                   <div className="mb-6">
                                     <img 
                                       src={project.logo} 
-                                      alt={`${project.title} logo`}
+                                      alt={`Logo de ${project.title} - ${project.category} desarrollado por ANCODEVS`}
                                       className="w-28 h-28 object-contain drop-shadow-2xl"
+                                      loading="lazy"
                                       onError={(e) => {
                                         const target = e.target as HTMLImageElement;
                                         target.style.display = 'none';

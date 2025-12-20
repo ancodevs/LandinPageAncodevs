@@ -44,8 +44,10 @@ const About = () => {
               Somos una empresa chilena comprometida con la transformación digital.
             </p>
             <p className="text-muted-foreground text-lg mb-8">
-              Nos especializamos en crear soluciones tecnológicas innovadoras que impulsan 
-              el crecimiento de nuestros clientes, desde startups hasta grandes empresas.
+              Nos especializamos en crear <strong>soluciones tecnológicas innovadoras</strong> que impulsan 
+              el crecimiento de nuestros clientes, desde startups hasta grandes empresas. Somos una 
+              <strong> empresa de desarrollo de software en Santiago, Chile</strong>, comprometida con la 
+              <strong> transformación digital</strong> y la excelencia en cada proyecto.
             </p>
 
             {/* Mission & Vision */}

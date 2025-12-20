@@ -39,8 +39,9 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            Transformamos ideas en soluciones digitales. Especialistas en desarrollo de software, 
-            aplicaciones web y móviles, ciberseguridad y servicios cloud.
+            Transformamos ideas en soluciones digitales innovadoras. Especialistas en <strong>desarrollo de software en Chile</strong>, 
+            <strong> aplicaciones móviles iOS y Android</strong>, <strong>desarrollo web responsive</strong>, 
+            <strong> ciberseguridad</strong> y <strong>soluciones cloud computing</strong>. Empresa de tecnología con sede en Santiago, Chile.
           </p>
 
           {/* CTA Buttons */}
