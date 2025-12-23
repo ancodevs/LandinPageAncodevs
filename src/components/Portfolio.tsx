@@ -182,7 +182,7 @@ const Portfolio = () => {
       tags: ["React", "Node.js", "PostgreSQL", "Supabase", "OpenAI", "Next.js"],
       logo: "/logos/canchaapp-logo.png",
       screenshot: "/canchapp1.svg", // Captura de pantalla SVG de CanchaApp
-      link: "https://canchaapp.cl",
+      link: "https://canchapp.cl",
     },
     {
       title: "AnamnesisPRO+",
