@@ -35,14 +35,8 @@ const About = () => {
           <div>
             <span className="text-primary font-medium text-sm uppercase tracking-wider">Sobre Nosotros</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-4 mb-6">
-              La Historia detrás de <span className="text-gradient">ANCODEVS</span>
+              En <span className="text-gradient">ANCODEVS</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-6">
-              <strong className="text-foreground">ANCODEVS</strong> nace de la unión de dos apellidos: 
-              <strong className="text-primary"> Anacona</strong> y <strong className="text-primary">Correa</strong> ("Anco"), 
-              combinados con <strong className="text-primary">Devs</strong> (developers). 
-              Somos una empresa chilena comprometida con la transformación digital.
-            </p>
             <p className="text-muted-foreground text-lg mb-8">
               Nos especializamos en crear <strong>soluciones tecnológicas innovadoras</strong> que impulsan 
               el crecimiento de nuestros clientes, desde startups hasta grandes empresas. Somos una 

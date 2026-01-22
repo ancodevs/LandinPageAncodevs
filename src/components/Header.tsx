@@ -34,11 +34,10 @@ const Header = () => {
           <img 
             src="/logo.png" 
             alt="ANCODEVS SpA - Desarrollo de Software y Aplicaciones Móviles en Chile" 
-            className="h-10 w-auto"
-            width="120"
-            height="40"
+            className="h-16 w-auto"
+            width="180"
+            height="64"
           />
-          <span className="font-display font-bold text-xl text-foreground">ANCODEVS</span>
         </a>
 
         {/* Desktop Navigation */}
