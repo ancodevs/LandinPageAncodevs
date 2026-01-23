@@ -33,9 +33,9 @@ const Footer = () => {
               <img 
                 src="/logo.png" 
                 alt="ANCODEVS SpA - Empresa de Desarrollo de Software Chile" 
-                className="h-20 w-auto brightness-0 invert"
-                width="220"
-                height="80"
+                className="h-20 md:h-24 w-auto brightness-0 invert"
+                width="280"
+                height="96"
               />
               <span className="font-display font-bold text-xl">ANCODEVS SpA</span>
             </div>

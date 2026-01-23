@@ -34,9 +34,9 @@ const Header = () => {
           <img 
             src="/logo.png" 
             alt="ANCODEVS SpA - Desarrollo de Software y Aplicaciones Móviles en Chile" 
-            className="h-12 md:h-16 lg:h-20 w-auto"
-            width="220"
-            height="80"
+            className="h-16 md:h-20 lg:h-24 w-auto"
+            width="280"
+            height="96"
           />
         </a>
 
