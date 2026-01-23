@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient pt-24 md:pt-32"
     >
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-grid-pattern" />
@@ -21,24 +21,24 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-up">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-medium text-muted-foreground">Empresa Chilena de Tecnología</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-secondary border border-border mb-6 md:mb-8 animate-fade-up">
+            <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-xs md:text-sm font-medium text-muted-foreground">Empresa Chilena de Tecnología</span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             <span className="text-foreground">ANCODEVS</span>
             <span className="text-gradient"> SpA</span>
           </h1>
 
           {/* Slogan */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-8 px-2 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             Innovación, Desarrollo y Tecnología a tu Medida
           </p>
 
           {/* Description */}
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+          <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 px-2 animate-fade-up" style={{ animationDelay: "0.3s" }}>
             Transformamos ideas en soluciones digitales innovadoras. Especialistas en <strong>desarrollo de software en Chile</strong>, 
             <strong> aplicaciones móviles iOS y Android</strong>, <strong>desarrollo web responsive</strong>, 
             <strong> ciberseguridad</strong> y <strong>soluciones cloud computing</strong>. Empresa de tecnología con sede en Santiago, Chile.
@@ -58,21 +58,21 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-20 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.5s" }}>
+          <div className="grid grid-cols-3 gap-4 md:gap-8 mt-12 md:mt-20 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.5s" }}>
             <div className="flex flex-col items-center">
-              <Code2 className="w-8 h-8 text-primary mb-2" />
-              <span className="text-2xl font-display font-bold text-foreground">Software</span>
-              <span className="text-sm text-muted-foreground">A Medida</span>
+              <Code2 className="w-6 h-6 md:w-8 md:h-8 text-primary mb-1 md:mb-2" />
+              <span className="text-lg md:text-2xl font-display font-bold text-foreground">Software</span>
+              <span className="text-xs md:text-sm text-muted-foreground">A Medida</span>
             </div>
             <div className="flex flex-col items-center">
-              <Cloud className="w-8 h-8 text-primary mb-2" />
-              <span className="text-2xl font-display font-bold text-foreground">Cloud</span>
-              <span className="text-sm text-muted-foreground">& Hosting</span>
+              <Cloud className="w-6 h-6 md:w-8 md:h-8 text-primary mb-1 md:mb-2" />
+              <span className="text-lg md:text-2xl font-display font-bold text-foreground">Cloud</span>
+              <span className="text-xs md:text-sm text-muted-foreground">& Hosting</span>
             </div>
             <div className="flex flex-col items-center">
-              <Shield className="w-8 h-8 text-primary mb-2" />
-              <span className="text-2xl font-display font-bold text-foreground">Seguridad</span>
-              <span className="text-sm text-muted-foreground">Garantizada</span>
+              <Shield className="w-6 h-6 md:w-8 md:h-8 text-primary mb-1 md:mb-2" />
+              <span className="text-lg md:text-2xl font-display font-bold text-foreground">Seguridad</span>
+              <span className="text-xs md:text-sm text-muted-foreground">Garantizada</span>
             </div>
           </div>
         </div>
