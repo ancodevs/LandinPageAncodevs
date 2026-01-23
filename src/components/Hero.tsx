@@ -27,7 +27,7 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             <span className="text-foreground">ANCODEVS</span>
             <span className="text-gradient"> SpA</span>
           </h1>
