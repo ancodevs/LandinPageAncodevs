@@ -126,4 +126,29 @@
 
 **Última actualización**: 20 de Diciembre, 2024
 
+---
+
+## 🔄 Actualización SEO + GEO — 27 de Julio, 2026
+
+### Correcciones de datos falsos/placeholder
+- Teléfono corregido en JSON-LD (Organization → `ProfessionalService`): de placeholder `+56-9-1234-5678` a el real `+56 9 37583096`.
+- Eliminado el campo `sameAs` (redes sociales ficticias) del JSON-LD y la sección "Síguenos" de `Contact.tsx` (aún no existen cuentas reales). También se quitaron `twitter:site`/`twitter:creator` (`@ancodevs` no existe).
+- Eliminada la `SearchAction`/`potentialAction` ficticia del JSON-LD `WebSite` (el sitio no tiene buscador interno).
+- Catálogo de servicios (`OfferCatalog`) ampliado de 5 a los 8 servicios reales y completos.
+- `sitemap.xml` simplificado: eliminadas 6 URLs de fragmentos `#hash` que no son documentos indexables reales; solo queda la URL raíz.
+- Meta `keywords` eliminada (práctica obsoleta, sin efecto en Google/Bing).
+- Imagen `og:image`/`twitter:image` reemplazada: de `logo.png` (cuadrado) a un banner `og-image.png` de 1200x630 diseñado específicamente para vistas previas en redes/mensajería.
+- Agregado `<link rel="icon" href="/favicon.ico">` (antes solo se usaba `logo.png` como ícono).
+
+### Nuevo: optimización GEO (Generative Engine Optimization / visibilidad en IA)
+- Se agregó `public/llms.txt` con un resumen factual de la empresa, servicios y contacto, pensado para que asistentes de IA (ChatGPT, Gemini, Claude, Perplexity) puedan resumir el negocio sin inventar datos.
+- Se añadieron entradas explícitas en `robots.txt` para bots de IA: `GPTBot`, `ChatGPT-User`, `OAI-SearchBot` (OpenAI), `ClaudeBot`, `Claude-Web`, `anthropic-ai` (Anthropic), `Google-Extended` (Google, entrenamiento de IA), `PerplexityBot`, `CCBot`.
+- Datos estructurados (JSON-LD) revisados para eliminar toda información fabricada, priorizando precisión y confianza para sistemas de IA que citan negocios.
+
+### Próximos pasos manuales (requieren acceso de cuenta del usuario)
+1. Crear cuenta en Google Search Console y Bing Webmaster Tools, verificar el dominio (reemplazar el código placeholder en `public/google-site-verification.html` o usar un registro DNS), y enviar `sitemap.xml`.
+2. Cuando existan cuentas reales de redes sociales, volver a agregar `sameAs` en JSON-LD y restaurar/crear la sección de redes sociales en `Contact.tsx` con enlaces reales.
+3. Considerar Google Analytics / Search Console para medir impacto de estos cambios.
+4. Revisar periódicamente si conviene agregar `Bytespider` a `robots.txt` según resultados observados.
+
 

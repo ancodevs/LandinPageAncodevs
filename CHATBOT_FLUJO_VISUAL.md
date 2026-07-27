@@ -202,7 +202,7 @@ Email enviado exitosamente ↓
 
 ---
 
-## 📧 Email Recibido en ancodevs.spa@gmail.com
+## 📧 Email Recibido en contacto@ancodevs.cl
 
 ```
 ┌──────────────────────────────────────────────┐
@@ -210,7 +210,7 @@ Email enviado exitosamente ↓
 ├──────────────────────────────────────────────┤
 │                                              │
 │  De: Chatbot Ancodevs                        │
-│      <ancodevs.spa@gmail.com>                │
+│      <contacto@ancodevs.cl>                  │
 │                                              │
 │  Asunto: Nuevo contacto desde el Chatbot -  │
 │          Desarrollo Web                      │

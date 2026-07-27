@@ -3,15 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send,
-  Linkedin,
-  Instagram,
-  Github
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send
 } from "lucide-react";
+import SectionTag from "@/components/SectionTag";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -49,44 +47,35 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
-      value: "ancodevs.spa@gmail.com",
-      href: "mailto:ancodevs.spa@gmail.com",
+      label: "email",
+      value: "contacto@ancodevs.cl",
+      href: "mailto:contacto@ancodevs.cl",
     },
     {
       icon: Phone,
-      label: "Teléfono",
-      value: "+56 9 37583096",
-      href: "tel:+56937583096",
+      label: "teléfono",
+      value: "+56 9 5149 1978",
+      href: "tel:+56951491978",
     },
     {
       icon: MapPin,
-      label: "Ubicación",
+      label: "ubicación",
       value: "Santiago, Chile",
       href: "#",
     },
   ];
 
-  const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Github, href: "#", label: "GitHub" },
-  ];
-
   return (
-    <section id="contacto" className="py-24 bg-background relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-secondary/50 to-transparent" />
-      
+    <section id="contacto" className="py-24 bg-background border-t border-border relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary font-medium text-sm uppercase tracking-wider">Contacto</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-4 mb-6">
-            ¿Listo para <span className="text-gradient">Comenzar</span>?
+        <div className="max-w-2xl mb-16">
+          <SectionTag label="contacto" className="mb-4" />
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground tracking-tight mt-4 mb-6">
+            ¿Listo para comenzar?
           </h2>
           <p className="text-muted-foreground text-lg">
-            Cuéntanos sobre tu proyecto y hagamos realidad tu visión digital. 
+            Cuéntanos sobre tu proyecto y hagamos realidad tu visión digital.
             Estamos aquí para ayudarte.
           </p>
         </div>
@@ -98,7 +87,7 @@ const Contact = () => {
               Información de Contacto
             </h3>
             <p className="text-muted-foreground mb-8">
-              Escríbenos o llámanos. Estaremos encantados de discutir cómo podemos 
+              Escríbenos o llámanos. Estaremos encantados de discutir cómo podemos
               ayudarte a alcanzar tus objetivos tecnológicos.
             </p>
 
@@ -109,11 +98,9 @@ const Contact = () => {
                   href={info.href}
                   className="flex items-center gap-4 group"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                    <info.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
-                  </div>
+                  <info.icon className="w-5 h-5 text-foreground group-hover:text-primary transition-colors" />
                   <div>
-                    <span className="text-sm text-muted-foreground">{info.label}</span>
+                    <span className="font-mono text-xs text-muted-foreground">{info.label}</span>
                     <p className="font-medium text-foreground group-hover:text-primary transition-colors">
                       {info.value}
                     </p>
@@ -122,26 +109,13 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Social Links */}
-            <div>
-              <h4 className="font-display font-semibold text-foreground mb-4">Síguenos</h4>
-              <div className="flex gap-4">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary group transition-colors"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground transition-colors" />
-                  </a>
-                ))}
-              </div>
-            </div>
+            <p className="font-mono text-sm text-muted-foreground border-t border-border pt-6">
+              respuesta en &lt; 24 hrs
+            </p>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-card rounded-2xl p-8 border border-border shadow-soft">
+          <div className="bg-card rounded-lg p-8 border border-border shadow-soft">
             <h3 className="font-display text-xl font-bold text-foreground mb-6">
               Envíanos un Mensaje
             </h3>

@@ -75,7 +75,7 @@
    - Consultoría TI
 
 5. **Sistema de Envío de Emails** 📧
-   - Destino: ancodevs.spa@gmail.com
+   - Destino: contacto@ancodevs.cl
    - Tecnología: EmailJS
    - Formato estructurado con toda la información
    - Notificaciones de éxito/error
@@ -106,7 +106,7 @@
 **DEBES hacer esto para que funcione el envío de emails:**
 
 1. Ve a [emailjs.com](https://www.emailjs.com/) y crea una cuenta (GRATIS)
-2. Conecta tu Gmail (ancodevs.spa@gmail.com)
+2. Conecta tu Gmail (contacto@ancodevs.cl)
 3. Crea un servicio y obtén tu **Service ID**
 4. Crea una plantilla y obtén tu **Template ID**
 5. Copia tu **Public Key**
@@ -162,7 +162,7 @@ await emailjs.send(
 
 ## 📊 Formato del Email Enviado
 
-Los datos se envían a **ancodevs.spa@gmail.com** en este formato:
+Los datos se envían a **contacto@ancodevs.cl** en este formato:
 
 ```
 Asunto: Nuevo contacto desde el chatbot de Ancodevs
@@ -212,7 +212,7 @@ Nombre/Razón Social: [Juan Pérez]
    - Ingresa tu nombre
    - ¡Listo!
 
-5. **Revisa el email** en ancodevs.spa@gmail.com
+5. **Revisa el email** en contacto@ancodevs.cl
 
 ## 📂 Archivos Creados/Modificados
 
@@ -262,7 +262,7 @@ Nombre/Razón Social: [Juan Pérez]
 ## 📞 Soporte
 
 Si necesitas ayuda o quieres agregar funcionalidades:
-- 📧 Email: ancodevs.spa@gmail.com
+- 📧 Email: contacto@ancodevs.cl
 - 💬 Usa el mismo chatbot para contactar
 
 ---

@@ -1,0 +1,42 @@
+# ANCODEVS SpA
+
+> Empresa chilena de desarrollo de software con sede en Santiago, Región Metropolitana, Chile. Ofrece desarrollo de software a medida, aplicaciones móviles, desarrollo web, hosting/cloud, ciberseguridad, procesamiento de datos, soporte técnico y consultoría TI.
+
+## Sobre la empresa
+- Nombre legal: ANCODEVS SpA
+- Ubicación: Santiago, Región Metropolitana, Chile
+- Fundada: 2024
+- Sitio web: https://ancodevs.cl
+- Este es un sitio de una sola página (landing page SPA); no existe blog, buscador interno ni subpáginas adicionales indexables.
+
+## Misión
+Desarrollar soluciones tecnológicas de alta calidad que transformen la manera en que las empresas operan y conectan con sus clientes.
+
+## Visión
+Ser reconocidos como líderes en innovación tecnológica en Chile y Latinoamérica, impulsando la transformación digital de la región.
+
+## Servicios
+1. **Desarrollo de Software** — desarrollo de software personalizado en Chile, soluciones escalables, mantenibles y de alta calidad.
+2. **Aplicaciones Móviles** — apps nativas e híbridas para iOS y Android.
+3. **Desarrollo Web** — sitios web modernos, responsivos y optimizados para SEO, desde landing pages hasta PWAs.
+4. **Hosting & Cloud** — alojamiento, administración de servidores y arquitecturas escalables en la nube.
+5. **Ciberseguridad** — auditorías de seguridad, pentesting, consultoría y compliance.
+6. **Procesamiento de Datos** — Business Intelligence, ETL y Big Data.
+7. **Soporte Técnico** — asistencia técnica especializada 24/7, mantenimiento preventivo y correctivo.
+8. **Consultoría TI** — asesoramiento estratégico, optimización de procesos y transformación digital.
+
+## Contacto
+- Email: contacto@ancodevs.cl
+- Teléfono: +56 9 5149 1978
+- Ubicación: Santiago, Chile
+- Nota: ANCODEVS SpA aún no cuenta con perfiles de redes sociales activos verificados; no asumir ni inventar URLs de LinkedIn/Instagram/GitHub u otras redes.
+
+## Enlaces
+- Sitio: https://ancodevs.cl
+- Sitemap: https://ancodevs.cl/sitemap.xml
+- Robots: https://ancodevs.cl/robots.txt
+
+## Notas para asistentes de IA / crawlers
+- No existe funcionalidad de búsqueda en el sitio.
+- Toda la navegación es dentro de una sola página (anclas internas), no hay URLs adicionales que indexar.
+- Usar únicamente los datos de contacto y servicios listados aquí; no inferir ni fabricar información no confirmada (ej. redes sociales, precios, certificaciones).
