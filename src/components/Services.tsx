@@ -51,7 +51,7 @@ const Services = () => {
     {
       icon: MessageSquare,
       title: "Consultoría TI",
-      description: "Asesoría estratégica para la transformación digital de tu empresa.",
+      description: "Asesoría estratégica para la transformación digital de tu negocio.",
     },
   ];
 
@@ -66,7 +66,8 @@ const Services = () => {
           </h2>
           <p className="text-muted-foreground text-lg">
             Ofrecemos un portafolio completo de servicios de desarrollo de software en Chile,
-            diseñado para impulsar la transformación digital de tu negocio.
+            pensado para pymes, negocios locales, profesionales y empresas que quieren
+            dar el salto a la transformación digital.
           </p>
         </div>
 
