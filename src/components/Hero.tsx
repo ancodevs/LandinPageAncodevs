@@ -27,8 +27,8 @@ const Hero = () => {
 
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
               Diseñamos y construimos aplicaciones web, móviles y sistemas a medida
-              para empresas chilenas — con la ciberseguridad y el soporte que tu
-              operación necesita.
+              para pymes, negocios locales, profesionales y empresas de todo tamaño
+              en Chile — con la ciberseguridad y el soporte que tu operación necesita.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-up" style={{ animationDelay: "0.3s" }}>

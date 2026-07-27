@@ -39,7 +39,8 @@ const About = () => {
             <p className="text-muted-foreground text-lg mb-8">
               Somos una empresa de desarrollo de software en Santiago, Chile,
               enfocada en crear soluciones tecnológicas que impulsan el crecimiento
-              de nuestros clientes, desde startups hasta grandes empresas.
+              de nuestros clientes: pymes, negocios locales, profesionales
+              independientes, startups y grandes empresas.
             </p>
 
             {/* Mission & Vision */}
@@ -50,7 +51,7 @@ const About = () => {
                 <h3 className="font-display font-semibold text-foreground text-lg mb-2">Misión</h3>
                 <p className="text-muted-foreground text-sm">
                   Desarrollar soluciones tecnológicas de alta calidad que transformen la manera
-                  en que las empresas operan y conectan con sus clientes.
+                  en que los negocios —de cualquier tamaño— operan y conectan con sus clientes.
                 </p>
               </div>
               <div className="p-6 rounded-lg bg-card border border-border">

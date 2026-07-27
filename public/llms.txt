@@ -1,6 +1,6 @@
 # ANCODEVS SpA
 
-> Empresa chilena de desarrollo de software con sede en Santiago, Región Metropolitana, Chile. Ofrece desarrollo de software a medida, aplicaciones móviles, desarrollo web, hosting/cloud, ciberseguridad, procesamiento de datos, soporte técnico y consultoría TI.
+> Empresa chilena de desarrollo de software con sede en Santiago, Región Metropolitana, Chile. Atiende a pymes, negocios locales, profesionales independientes y empresas de todo tamaño. Ofrece desarrollo de software a medida, aplicaciones móviles, desarrollo web, hosting/cloud, ciberseguridad, procesamiento de datos, soporte técnico y consultoría TI.
 
 ## Sobre la empresa
 - Nombre legal: ANCODEVS SpA
@@ -10,7 +10,7 @@
 - Este es un sitio de una sola página (landing page SPA); no existe blog, buscador interno ni subpáginas adicionales indexables.
 
 ## Misión
-Desarrollar soluciones tecnológicas de alta calidad que transformen la manera en que las empresas operan y conectan con sus clientes.
+Desarrollar soluciones tecnológicas de alta calidad que transformen la manera en que pymes, negocios locales, profesionales y empresas operan y conectan con sus clientes.
 
 ## Visión
 Ser reconocidos como líderes en innovación tecnológica en Chile y Latinoamérica, impulsando la transformación digital de la región.
