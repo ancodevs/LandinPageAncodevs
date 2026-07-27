@@ -1,5 +1,3 @@
-import { Heart } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -16,47 +14,42 @@ const Footer = () => {
       { label: "Proceso", href: "#proceso" },
       { label: "Contacto", href: "#contacto" },
     ],
-    legal: [
-      { label: "Política de Privacidad", href: "#" },
-      { label: "Términos de Servicio", href: "#" },
-    ],
   };
 
   return (
-    <footer className="bg-tech-gradient text-primary-foreground">
+    <footer className="bg-ink text-paper border-t border-white/10">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Brand */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <img 
-                src="/logo.png" 
-                alt="ANCODEVS SpA - Empresa de Desarrollo de Software Chile" 
-                className="h-20 md:h-24 w-auto brightness-0 invert"
-                width="280"
-                height="96"
+          <div>
+            <div className="inline-block bg-paper rounded-md px-3 py-2 mb-6">
+              <img
+                src="/logo.png"
+                alt="ANCODEVS SpA - Empresa de Desarrollo de Software Chile"
+                className="h-8 md:h-10 w-auto"
+                width="117"
+                height="48"
               />
-              <span className="font-display font-bold text-xl">ANCODEVS SpA</span>
             </div>
-            <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
-              Empresa chilena especializada en soluciones tecnológicas innovadoras. 
+            <p className="text-paper/70 text-sm leading-relaxed mb-6">
+              Empresa chilena especializada en soluciones tecnológicas innovadoras.
               Transformamos ideas en realidad digital.
             </p>
-            <p className="text-primary-foreground/50 text-xs"><br />
+            <p className="text-paper/50 text-xs">
               Santiago, Chile
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-6">Servicios</h4>
+            <h4 className="font-mono text-sm text-paper/50 mb-6">servicios</h4>
             <ul className="space-y-3">
               {footerLinks.servicios.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors"
+                    className="text-paper/70 hover:text-primary text-sm transition-colors"
                   >
                     {link.label}
                   </a>
@@ -67,30 +60,13 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-6">Empresa</h4>
+            <h4 className="font-mono text-sm text-paper/50 mb-6">empresa</h4>
             <ul className="space-y-3">
               {footerLinks.empresa.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-display font-semibold text-lg mb-6">Legal</h4>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors"
+                    className="text-paper/70 hover:text-primary text-sm transition-colors"
                   >
                     {link.label}
                   </a>
@@ -102,13 +78,13 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-primary-foreground/10">
+      <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-primary-foreground/60 text-sm">
+            <p className="font-mono text-xs text-paper/50">
               © {currentYear} ANCODEVS SpA. Todos los derechos reservados.
             </p>
-            <p className="text-primary-foreground/60 text-sm flex items-center gap-1">
+            <p className="font-mono text-xs text-paper/50">
               Hecho en Chile
             </p>
           </div>

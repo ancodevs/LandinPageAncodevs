@@ -1,6 +1,6 @@
 # Configuración de EmailJS para el Chatbot
 
-Para que el chatbot pueda enviar correos electrónicos a `ancodevs.spa@gmail.com`, sigue estos pasos:
+Para que el chatbot pueda enviar correos electrónicos a `contacto@ancodevs.cl`, sigue estos pasos:
 
 ## Paso 1: Crear una cuenta en EmailJS
 
@@ -13,7 +13,7 @@ Para que el chatbot pueda enviar correos electrónicos a `ancodevs.spa@gmail.com
 1. En el panel de EmailJS, ve a **Email Services**
 2. Haz clic en **Add New Service**
 3. Selecciona **Gmail** (o el servicio que uses)
-4. Conecta tu cuenta `ancodevs.spa@gmail.com`
+4. Conecta tu cuenta `contacto@ancodevs.cl`
 5. Copia el **Service ID** que te proporcionen
 
 ## Paso 3: Crear una plantilla de email
@@ -78,7 +78,7 @@ await emailjs.send(
 1. Inicia tu aplicación con `npm run dev`
 2. Haz clic en el botón del chatbot
 3. Completa el flujo conversacional
-4. Verifica que el email llegue a `ancodevs.spa@gmail.com`
+4. Verifica que el email llegue a `contacto@ancodevs.cl`
 
 ## Notas adicionales
 

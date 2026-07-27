@@ -1,4 +1,6 @@
 import { Target, Eye, Heart, Lightbulb } from "lucide-react";
+import SectionTag from "@/components/SectionTag";
+import { Reveal } from "@/hooks/use-reveal";
 
 const About = () => {
   const values = [
@@ -25,44 +27,38 @@ const About = () => {
   ];
 
   return (
-    <section id="nosotros" className="py-24 bg-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-secondary/50 to-transparent" />
-      
+    <section id="nosotros" className="py-24 bg-background border-t border-border relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div>
-            <span className="text-primary font-medium text-sm uppercase tracking-wider">Sobre Nosotros</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-4 mb-6">
-              En <span className="text-gradient">ANCODEVS</span>
+            <SectionTag label="nosotros" className="mb-4" />
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground tracking-tight mt-4 mb-6">
+              En ANCODEVS
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Nos especializamos en crear <strong>soluciones tecnológicas innovadoras</strong> que impulsan 
-              el crecimiento de nuestros clientes, desde startups hasta grandes empresas. Somos una 
-              <strong> empresa de desarrollo de software en Santiago, Chile</strong>, comprometida con la 
-              <strong> transformación digital</strong> y la excelencia en cada proyecto.
+              Somos una empresa de desarrollo de software en Santiago, Chile,
+              enfocada en crear soluciones tecnológicas que impulsan el crecimiento
+              de nuestros clientes, desde startups hasta grandes empresas.
             </p>
 
             {/* Mission & Vision */}
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="p-6 rounded-xl bg-card border border-border hover-lift">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Target className="w-6 h-6 text-primary" />
-                </div>
+              <div className="p-6 rounded-lg bg-card border border-border">
+                <span className="font-mono text-xs text-muted-foreground">misión</span>
+                <Target className="w-5 h-5 text-foreground mt-3 mb-3" />
                 <h3 className="font-display font-semibold text-foreground text-lg mb-2">Misión</h3>
                 <p className="text-muted-foreground text-sm">
-                  Desarrollar soluciones tecnológicas de alta calidad que transformen la manera 
+                  Desarrollar soluciones tecnológicas de alta calidad que transformen la manera
                   en que las empresas operan y conectan con sus clientes.
                 </p>
               </div>
-              <div className="p-6 rounded-xl bg-card border border-border hover-lift">
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                  <Eye className="w-6 h-6 text-accent" />
-                </div>
+              <div className="p-6 rounded-lg bg-card border border-border">
+                <span className="font-mono text-xs text-muted-foreground">visión</span>
+                <Eye className="w-5 h-5 text-foreground mt-3 mb-3" />
                 <h3 className="font-display font-semibold text-foreground text-lg mb-2">Visión</h3>
                 <p className="text-muted-foreground text-sm">
-                  Ser reconocidos como líderes en innovación tecnológica en Chile y Latinoamérica, 
+                  Ser reconocidos como líderes en innovación tecnológica en Chile y Latinoamérica,
                   impulsando la transformación digital de la región.
                 </p>
               </div>
@@ -71,31 +67,27 @@ const About = () => {
 
           {/* Right Content - Values */}
           <div>
-            <div className="bg-tech-gradient rounded-2xl p-8 md:p-10">
-              <h3 className="font-display text-2xl font-bold text-primary-foreground mb-8">
+            <div className="bg-ink border border-white/10 rounded-lg p-8 md:p-10">
+              <h3 className="font-display text-2xl font-bold text-paper mb-8">
                 Nuestros Valores
               </h3>
               <div className="grid sm:grid-cols-2 gap-6">
                 {values.map((value, index) => (
-                  <div
-                    key={value.title}
-                    className="group"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
+                  <Reveal key={value.title} delay={index * 100}>
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center shrink-0 group-hover:bg-primary-foreground/20 transition-colors">
-                        <value.icon className="w-5 h-5 text-primary-foreground" />
-                      </div>
+                      <span className="font-mono text-sm text-primary shrink-0">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
                       <div>
-                        <h4 className="font-display font-semibold text-primary-foreground mb-1">
+                        <h4 className="font-display font-semibold text-paper mb-1">
                           {value.title}
                         </h4>
-                        <p className="text-primary-foreground/70 text-sm">
+                        <p className="text-paper/60 text-sm">
                           {value.description}
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </Reveal>
                 ))}
               </div>
             </div>

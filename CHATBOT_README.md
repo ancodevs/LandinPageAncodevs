@@ -11,7 +11,7 @@
    3. Detalles del proyecto
    4. Correo electrónico (con validación)
    5. Nombre o Razón Social
-   6. Envío automático a `ancodevs.spa@gmail.com`
+   6. Envío automático a `contacto@ancodevs.cl`
 
 ✅ **Diseño moderno**: Gradientes azul-púrpura, animaciones, sombras y efectos hover
 ✅ **Validaciones**: Email validado, campos obligatorios
@@ -76,7 +76,7 @@ Para cambiar el avatar femenino:
 1. Ejecuta `npm run dev`
 2. Haz clic en el botón flotante (abajo a la derecha)
 3. Sigue el flujo conversacional
-4. Verifica que el email llegue a `ancodevs.spa@gmail.com`
+4. Verifica que el email llegue a `contacto@ancodevs.cl`
 
 ## 📝 Estructura de mensajes
 

@@ -1,3 +1,4 @@
+// TODO: retematizar (usa .text-gradient / .hover-lift, eliminados del design system) antes de reactivar. Contenido también es placeholder/ficticio.
 import { Star, Quote } from "lucide-react";
 
 const Testimonials = () => {

@@ -84,7 +84,7 @@ Abre http://localhost:8081 y busca el botón flotante 💬
 
 ### Paso 2: Configurar EmailJS
 1. Ve a [emailjs.com](https://www.emailjs.com/) y créate una cuenta (gratis)
-2. Conecta tu Gmail: ancodevs.spa@gmail.com
+2. Conecta tu Gmail: contacto@ancodevs.cl
 3. Crea un servicio y una plantilla (usa la de `EMAILJS_TEMPLATE.md`)
 4. Copia Public Key, Service ID y Template ID
 5. Pégalos en `src/components/Chatbot.tsx` líneas ~171, ~188, ~189
@@ -107,7 +107,7 @@ Abre http://localhost:8081 y busca el botón flotante 💬
    - Detalles del proyecto
    - Email (con validación)
    - Nombre o Razón Social
-✅ **Envía email automático** a ancodevs.spa@gmail.com
+✅ **Envía email automático** a contacto@ancodevs.cl
 ✅ **Diseño moderno** con gradientes y animaciones
 ✅ **100% responsive** (funciona en móviles y escritorio)
 
@@ -274,7 +274,7 @@ EMAILJS_TEMPLATE.md            ← Plantilla de email
 3. ✅ Lee los mensajes de error en la terminal
 
 ### Problema no listado
-1. 📧 Contacta a: ancodevs.spa@gmail.com
+1. 📧 Contacta a: contacto@ancodevs.cl
 2. 💬 O usa el mismo chatbot (cuando esté funcionando)
 
 ---
@@ -317,7 +317,7 @@ Este chatbot te ayudará a:
 ## 📞 Contacto
 
 **Ancodevs Digital Hub**
-- 📧 Email: ancodevs.spa@gmail.com
+- 📧 Email: contacto@ancodevs.cl
 - 💬 Chatbot: Próximamente en tu sitio
 
 ---

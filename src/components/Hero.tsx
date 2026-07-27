@@ -1,89 +1,81 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code2, Shield, Cloud } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient pt-24 md:pt-32"
+      className="relative min-h-screen flex items-center overflow-hidden bg-background pt-24 md:pt-32"
     >
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-grid-pattern" />
-      
-      {/* Floating Elements */}
-      <div className="absolute top-1/4 left-10 w-20 h-20 rounded-full bg-primary/10 animate-float" />
-      <div className="absolute bottom-1/4 right-10 w-32 h-32 rounded-full bg-accent/10 animate-float" style={{ animationDelay: "2s" }} />
-      <div className="absolute top-1/3 right-1/4 w-16 h-16 rounded-full bg-primary/5 animate-float" style={{ animationDelay: "4s" }} />
-
-      {/* Gradient Orbs */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-primary/20 to-accent/20 blur-3xl" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-secondary border border-border mb-6 md:mb-8 animate-fade-up">
-            <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-xs md:text-sm font-medium text-muted-foreground">Empresa Chilena de Tecnología</span>
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
+          {/* Left column */}
+          <div>
+            <p className="font-mono text-sm text-muted-foreground mb-6 animate-fade-up">
+              <span className="text-primary">$</span> ancodevs@santiago:~
+            </p>
+
+            <h1 className="font-display font-bold tracking-tight text-5xl md:text-6xl lg:text-7xl mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+              <span className="text-foreground">
+                Software a la medida, hecho en Chile
+              </span>
+              <span aria-hidden="true" className="text-primary animate-blink motion-reduce:animate-none">_</span>
+            </h1>
+
+            <p className="text-base md:text-lg text-muted-foreground max-w-xl mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+              Diseñamos y construimos aplicaciones web, móviles y sistemas a medida
+              para empresas chilenas — con la ciberseguridad y el soporte que tu
+              operación necesita.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+              <Button variant="hero" size="xl" asChild>
+                <a href="#contacto">
+                  Iniciar proyecto
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="hero-outline" size="xl" asChild>
+                <a href="#servicios">Ver servicios</a>
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap font-mono text-sm text-muted-foreground divide-x divide-border animate-fade-up" style={{ animationDelay: "0.4s" }}>
+              <span className="pr-4">8 servicios</span>
+              <span className="px-4">4 proyectos en producción</span>
+              <span className="pl-4">Santiago, Chile</span>
+            </div>
           </div>
 
-          {/* Main Heading */}
-          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            <span className="text-foreground">ANCODEVS</span>
-            <span className="text-gradient"> SpA</span>
-          </h1>
-
-          {/* Slogan */}
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-8 px-2 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            Innovación, Desarrollo y Tecnología a tu Medida
-          </p>
-
-          {/* Description */}
-          <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 px-2 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            Transformamos ideas en soluciones digitales innovadoras. Especialistas en <strong>desarrollo de software en Chile</strong>, 
-            <strong> aplicaciones móviles iOS y Android</strong>, <strong>desarrollo web responsive</strong>, 
-            <strong> ciberseguridad</strong> y <strong>soluciones cloud computing</strong>. Empresa de tecnología con sede en Santiago, Chile.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.4s" }}>
-            <Button variant="hero" size="xl" asChild>
-              <a href="#contacto">
-                Iniciar Proyecto
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="hero-outline" size="xl" asChild>
-              <a href="#servicios">Ver Servicios</a>
-            </Button>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 md:gap-8 mt-12 md:mt-20 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.5s" }}>
-            <div className="flex flex-col items-center">
-              <Code2 className="w-6 h-6 md:w-8 md:h-8 text-primary mb-1 md:mb-2" />
-              <span className="text-lg md:text-2xl font-display font-bold text-foreground">Software</span>
-              <span className="text-xs md:text-sm text-muted-foreground">A Medida</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Cloud className="w-6 h-6 md:w-8 md:h-8 text-primary mb-1 md:mb-2" />
-              <span className="text-lg md:text-2xl font-display font-bold text-foreground">Cloud</span>
-              <span className="text-xs md:text-sm text-muted-foreground">& Hosting</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <Shield className="w-6 h-6 md:w-8 md:h-8 text-primary mb-1 md:mb-2" />
-              <span className="text-lg md:text-2xl font-display font-bold text-foreground">Seguridad</span>
-              <span className="text-xs md:text-sm text-muted-foreground">Garantizada</span>
+          {/* Right column — static terminal card */}
+          <div className="hidden lg:block">
+            <div className="bg-ink rounded-lg border border-white/10 shadow-elevated p-5 font-mono text-sm">
+              <div className="flex gap-1.5 mb-4">
+                <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
+                <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
+                <span className="w-2.5 h-2.5 rounded-full bg-primary" />
+              </div>
+              <div className="space-y-2 text-paper/80">
+                <p><span className="text-paper/40">$</span> ancodevs init --proyecto "tu-idea"</p>
+                <p><span className="text-primary">✓</span> diseño de solución</p>
+                <p><span className="text-primary">✓</span> desarrollo + pruebas</p>
+                <p><span className="text-primary">→</span> despliegue en producción</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
-          <div className="w-1 h-2 rounded-full bg-primary animate-pulse" />
-        </div>
-      </div>
+      <a
+        href="#nosotros"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 font-mono text-xs text-muted-foreground hover:text-primary transition-colors"
+      >
+        scroll ↓
+      </a>
     </section>
   );
 };

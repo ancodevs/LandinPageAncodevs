@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { X, Send } from 'lucide-react';
+import { X, Send, Terminal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
@@ -12,6 +12,15 @@ interface Message {
 }
 
 type ChatStep = 'welcome' | 'service-selected' | 'project-details' | 'email' | 'name' | 'completed';
+
+// Insignia de "terminal" que reemplaza el avatar fotográfico: reutiliza el
+// mismo lenguaje visual de la tarjeta de terminal del Hero (ink + señal azul)
+// en vez de un rostro genérico de IA.
+const BotBadge = ({ className = '', iconClassName = '' }: { className?: string; iconClassName?: string }) => (
+  <div className={`bg-ink rounded-md flex items-center justify-center shrink-0 ${className}`}>
+    <Terminal className={`text-primary ${iconClassName}`} />
+  </div>
+);
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +58,7 @@ const Chatbot = () => {
   useEffect(() => {
     if (isOpen && currentStep === 'welcome' && messages.length === 0) {
       setTimeout(() => {
-        addBotMessage('¡Hola! Soy ACIA, tu asistente virtual de Ancodevs 👋', true);
+        addBotMessage('¡Hola! Soy el asistente virtual de Ancodevs 👋', true);
       }, 500);
       setTimeout(() => {
         addBotMessage('¿En qué podemos ayudarte?', false, services);
@@ -164,7 +173,7 @@ const Chatbot = () => {
       emailjs.init('xZ-YJhbw4o5z2k1Kq'); // Reemplazar con tu clave pública de EmailJS
 
       const templateParams = {
-        to_email: 'ancodevs.spa@gmail.com',
+        to_email: 'contacto@ancodevs.cl',
         from_name: data.name,
         from_email: data.email,
         service: data.service,
@@ -199,7 +208,7 @@ Nombre/Razón Social: ${data.name}
       console.error('Error al enviar el email:', error);
       
       setTimeout(() => {
-        addBotMessage('Lo siento, hubo un error al enviar tu información. Por favor, intenta contactarnos directamente a ancodevs.spa@gmail.com 😔');
+        addBotMessage('Lo siento, hubo un error al enviar tu información. Por favor, intenta contactarnos directamente a contacto@ancodevs.cl 😔');
       }, 1000);
       
       toast.error('Error al enviar el mensaje. Por favor, intenta nuevamente.');
@@ -235,7 +244,7 @@ Nombre/Razón Social: ${data.name}
     setUserInput('');
     
     setTimeout(() => {
-      addBotMessage('¡Hola! Soy ACIA, tu asistente virtual de Ancodevs 👋', true);
+      addBotMessage('¡Hola! Soy el asistente virtual de Ancodevs 👋', true);
     }, 500);
     setTimeout(() => {
       addBotMessage('¿En qué podemos ayudarte?', false, services);
@@ -246,84 +255,68 @@ Nombre/Razón Social: ${data.name}
     <>
       {/* Botón flotante con mensaje */}
       {!isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 animate-float">
+        <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
           {/* Mensaje flotante */}
-          <div className="hidden md:flex bg-white rounded-2xl shadow-2xl px-5 py-3 items-center gap-2 border-2 border-blue-200">
+          <div className="hidden md:flex bg-card rounded-lg shadow-soft px-5 py-3 items-center gap-2 border border-border">
             <div className="flex flex-col">
-              <p className="text-sm font-semibold text-gray-800">Soy ACIA, tu asistente virtual</p>
-              <p className="text-xs text-blue-600">¿En qué puedo ayudarte hoy? 💬</p>
+              <p className="text-sm font-semibold text-foreground">Asistente Virtual</p>
+              <p className="text-xs text-primary">¿En qué puedo ayudarte hoy? 💬</p>
             </div>
           </div>
-          
-          {/* Botón con avatar más grande */}
-          <Button
+
+          {/* Botón */}
+          <button
             onClick={() => setIsOpen(true)}
-            className="h-20 w-20 rounded-full shadow-2xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-110 p-0 overflow-hidden ring-4 ring-blue-200 hover:ring-blue-300"
-            size="icon"
+            aria-label="Abrir chat con el asistente virtual"
+            className="relative h-14 w-14 transition-transform duration-300 hover:scale-110"
           >
-            <img 
-              src="/aia-avatar.png" 
-              alt="ACIA" 
-              className="w-full h-full object-cover"
-            />
-          </Button>
+            <BotBadge className="w-full h-full rounded-lg border border-white/10 shadow-elevated" iconClassName="w-6 h-6" />
+            <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-primary border-2 border-background" />
+          </button>
         </div>
       )}
 
       {/* Ventana del chat */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 w-96 h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col z-50 overflow-hidden border border-gray-200">
+        <div className="fixed bottom-6 right-6 w-96 h-[600px] bg-card rounded-lg shadow-elevated flex flex-col z-50 overflow-hidden border border-border">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 flex items-center justify-between">
+          <div className="bg-ink p-4 flex items-center justify-between">
              <div className="flex items-center gap-3">
-               {/* Avatar */}
-               <div className="w-10 h-10 rounded-full bg-white/10 overflow-hidden border-2 border-white/30">
-                 <img 
-                   src="/aia-avatar.png" 
-                   alt="ACIA" 
-                   className="w-full h-full object-cover"
-                 />
-               </div>
+               <BotBadge className="w-10 h-10 border border-white/20" iconClassName="w-5 h-5" />
                 <div>
-                  <h3 className="text-white font-semibold">ACIA</h3>
-                  <p className="text-white/80 text-xs">Asistente de Consultoría e Inteligencia Ancodevs</p>
+                  <h3 className="text-paper font-mono font-semibold">Asistente Virtual</h3>
+                  <p className="text-paper/70 text-xs">Ancodevs · en línea</p>
                 </div>
              </div>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(false)}
-              className="text-white hover:bg-white/20"
+              className="text-paper hover:bg-white/10"
             >
               <X className="h-5 w-5" />
             </Button>
           </div>
 
           {/* Mensajes */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-secondary">
             {messages.map((message, index) => (
               <div key={index} className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}>
                 <div className="flex items-start gap-2 max-w-[80%]">
                    {message.isBot && (
-                     <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 p-0.5 flex-shrink-0 overflow-hidden">
-                        <img 
-                          src="/aia-avatar.png" 
-                          alt="ACIA" 
-                          className="w-full h-full object-cover rounded-full"
-                        />
-                     </div>
+                     <BotBadge className="w-8 h-8 border border-white/10" iconClassName="w-4 h-4" />
                    )}
                   <div>
                     <div
-                      className={`rounded-2xl p-3 ${
+                      className={`rounded-lg p-3 ${
                         message.isBot
-                          ? 'bg-white text-gray-800 shadow-sm'
-                          : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
+                          ? 'bg-card text-foreground border border-border'
+                          : 'bg-primary text-primary-foreground'
                       }`}
                     >
                       <p className="text-sm whitespace-pre-wrap">{message.text}</p>
                     </div>
-                    
+
                     {/* Opciones de servicios */}
                     {message.options && message.options.length > 0 && (
                       <div className="mt-3 space-y-2">
@@ -332,7 +325,7 @@ Nombre/Razón Social: ${data.name}
                             key={optIndex}
                             onClick={() => handleServiceSelection(option)}
                             variant="outline"
-                            className="w-full text-left justify-start hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300 transition-all"
+                            className="w-full text-left justify-start hover:border-primary hover:text-primary transition-all"
                             size="sm"
                           >
                             {option}
@@ -349,7 +342,7 @@ Nombre/Razón Social: ${data.name}
 
           {/* Input area */}
           {currentStep !== 'welcome' && currentStep !== 'service-selected' && currentStep !== 'completed' && (
-            <div className="p-4 bg-white border-t border-gray-200">
+            <div className="p-4 bg-card border-t border-border">
               <div className="flex gap-2">
                 <Input
                   ref={inputRef}
@@ -363,7 +356,7 @@ Nombre/Razón Social: ${data.name}
                 <Button
                   onClick={handleSendMessage}
                   size="icon"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                  className="bg-primary hover:bg-primary/90"
                 >
                   <Send className="h-4 w-4" />
                 </Button>
@@ -373,10 +366,10 @@ Nombre/Razón Social: ${data.name}
 
           {/* Botón para reiniciar */}
           {currentStep === 'completed' && (
-            <div className="p-4 bg-white border-t border-gray-200">
+            <div className="p-4 bg-card border-t border-border">
               <Button
                 onClick={resetChat}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                className="w-full bg-primary hover:bg-primary/90"
               >
                 Iniciar nueva consulta
               </Button>

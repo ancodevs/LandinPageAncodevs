@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/ThemeToggle";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
@@ -26,17 +27,19 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-effect py-2 md:py-3" : "bg-transparent py-3 md:py-5"
+        isScrolled
+          ? "bg-background/95 backdrop-blur-sm border-b border-border py-2 md:py-3"
+          : "bg-transparent py-3 md:py-5"
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-3">
-          <img 
-            src="/logo.png" 
-            alt="ANCODEVS SpA - Desarrollo de Software y Aplicaciones Móviles en Chile" 
-            className="h-16 md:h-20 lg:h-24 w-auto"
-            width="280"
-            height="96"
+          <img
+            src="/logo.png"
+            alt="ANCODEVS SpA - Desarrollo de Software y Aplicaciones Móviles en Chile"
+            className="h-10 md:h-12 w-auto dark:invert"
+            width="117"
+            height="48"
           />
         </a>
 
@@ -53,25 +56,29 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
-          <Button variant="hero" size="lg" asChild>
+        <div className="hidden lg:flex items-center gap-3">
+          <ThemeToggle />
+          <Button variant="hero" size="default" asChild>
             <a href="#contacto">Contáctanos</a>
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden p-2 text-foreground"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Actions */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
+          <button
+            className="p-2 text-foreground"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 glass-effect border-t border-border animate-fade-in">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-background border-t border-border animate-fade-in">
           <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
             {navLinks.map((link) => (
               <a

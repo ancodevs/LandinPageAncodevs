@@ -39,5 +39,38 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
+# Bots de IA generativa (GEO) — permitir explícitamente para visibilidad en asistentes de IA
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google AI (entrenamiento de modelos, distinto de Googlebot de búsqueda)
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Common Crawl (usado para entrenar muchos LLMs)
+User-agent: CCBot
+Allow: /
+
 # Sitemap
 Sitemap: https://ancodevs.cl/sitemap.xml

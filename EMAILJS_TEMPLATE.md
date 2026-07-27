@@ -186,7 +186,7 @@ Fecha: {{reply_to}}
 
 ```
 From Name: Chatbot Ancodevs
-From Email: ancodevs.spa@gmail.com
+From Email: contacto@ancodevs.cl
 Reply To: {{from_email}}
 ```
 
@@ -319,7 +319,7 @@ desde Ancodevs Digital Hub
 Para recibir notificaciones inmediatas:
 
 1. Instala la app de Gmail en tu móvil
-2. Activa notificaciones para ancodevs.spa@gmail.com
+2. Activa notificaciones para contacto@ancodevs.cl
 3. Opcional: Crea un filtro para que los emails del chatbot tengan una etiqueta especial
 
 ---
@@ -329,7 +329,7 @@ Para recibir notificaciones inmediatas:
 Antes de lanzar a producción:
 
 - [ ] Cuenta de EmailJS creada
-- [ ] Gmail conectado (ancodevs.spa@gmail.com)
+- [ ] Gmail conectado (contacto@ancodevs.cl)
 - [ ] Service creado y activo
 - [ ] Template creada con el HTML de arriba
 - [ ] Template probada con "Test it"
